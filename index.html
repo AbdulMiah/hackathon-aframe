@@ -9,11 +9,14 @@
     <script src="https://cdn.jsdelivr.net/npm/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
   </head>
   <body>
-    <a-scene overlay-visibility>
+    <div id="loading-screen">
+      <h1>Loading...</h1>
+    </div>
+    <a-scene id="scene" overlay-visibility stats>
         <a-assets>
             <a-asset-item id="bottle" src="assets/plastic_water_bottle/scene.gltf"></a-asset-item>
             <a-asset-item id="garbage-bags" src="assets/garbage_bags/scene.gltf"></a-asset-item>
-            <a-asset-item id="urban-garbage" src="assets/urban_garbage_-_low_poly_prop_set/scene.gltf"></a-asset-item>
+            <a-asset-item id="skip" src="assets/rusty_skip/scene.gltf"></a-asset-item>
         </a-assets>
         <a-entity environment="preset: yavapai" preset-switcher id="environment"></a-entity>
         <a-entity id="entities-container"></a-entity>
@@ -21,13 +24,13 @@
     <script>
       const entities = document.querySelector('#entities-container');
       
-      const generateEntities = (model, scale, positionRange, lod, quantity) => {
+      const generateEntities = (model, scale, positionRange, lod, quantity, positionY) => {
         for (let i = 0; i < quantity; i++) {
           const entity = document.createElement('a-entity');
           const randomRotation = `0 ${Math.floor(Math.random() * 360)} 0`;
           const randomPositionX = Math.random() * positionRange - positionRange / 2;
           const randomPositionZ = Math.random() * positionRange - positionRange / 2;
-          const randomPosition = `${randomPositionX} 0 ${randomPositionZ}`;
+          const randomPosition = `${randomPositionX} ${positionY} ${randomPositionZ}`;
           
           entity.setAttribute('gltf-model', model);
           entity.setAttribute('scale', scale);
@@ -40,9 +43,20 @@
         }
       }
 
-      generateEntities('#garbage-bags', '0.5 0.5 0.5', 10, 'distance: 10000; factor: 1000', 5);
-      generateEntities('#bottle', '0.02 0.02 0.02', 10, 'distance: 10000; factor: 1000', 30);
-      generateEntities('#urban-garbage', '1 1 1', 30, 'distance: 10000; factor: 1000', 3);
+      // Hide the scene until after 10 seconds
+      const scene = document.querySelector('#scene');
+      scene.style.display = 'none';
+
+      // Display loading message for 10 seconds
+      const loadingScreen = document.querySelector('#loading-screen');
+      setTimeout(() => {
+        loadingScreen.style.display = 'none';
+        scene.style.display = 'initial';
+      }, 10000);
+
+      generateEntities('#garbage-bags', '0.5 0.5 0.5', 10, 'distance: 10000 ; factor: 500', 2, 0);
+      generateEntities('#bottle', '0.02 0.02 0.02', 10, 'distance: 10000; factor: 500', 20, 0);
+      generateEntities('#skip', '1 1 1', 20, 'distance: 10000; factor: 500', 5, 0.5);
     </script>
   </body>
 </html>
