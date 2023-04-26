@@ -2,20 +2,20 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>A-Frame Environment Component</title>
-    <meta name="description" content="A-Frame Environment Component">
+    <title>Plastic Waste VR</title>
+    <meta name="description" content="Plastic Waste VR">
     <meta name="author" content="Abdul Muktadir Miah">
     <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@090b5f8f0abe949ddcfdbbc14c75822322a2dd53/dist/aframe-master.min.js"></script>
     <script src="dist/aframe-environment-component.min.js"></script>
   </head>
   <body>
 
-    <a-scene overlay-visibility>
+    <a-scene overlay-visibility stats>
         <!-- Asset Management -->
         <a-assets>
-            <a-asset-item id="bottle-model" src="assets/plastic_water_bottle/scene.gltf"></a-asset-item>
+            <a-asset-item id="bottle" src="assets/plastic_water_bottle/scene.gltf"></a-asset-item>
             <a-asset-item id="garbage-bags" src="assets/garbage_bags/scene.gltf"></a-asset-item>
-            <a-asset-item id="garbage-quenn" src="assets/garbage_quenn/scene.gltf"></a-asset-item>
+            <!-- <a-asset-item id="garbage-quenn" src="assets/garbage_quenn/scene.gltf"></a-asset-item> -->
             <a-asset-item id="urban-garbage" src="assets/urban_garbage_-_low_poly_prop_set/scene.gltf"></a-asset-item>
         </a-assets>
 
@@ -23,69 +23,52 @@
         <a-entity environment="preset: yavapai" preset-switcher id="environment"></a-entity>
 
         <a-entity id="entities-container">
-            <a-entity gltf-model="#bottle-model" scale="0.02 0.02 0.02"></a-entity>
-            <a-entity gltf-model="#bottle-model" scale="0.02 0.02 0.02"></a-entity>
-            <a-entity gltf-model="#bottle-model" scale="0.02 0.02 0.02"></a-entity>
-            <a-entity gltf-model="#bottle-model" scale="0.02 0.02 0.02"></a-entity>
-            <a-entity gltf-model="#bottle-model" scale="0.02 0.02 0.02"></a-entity>
-            <a-entity gltf-model="#bottle-model" scale="0.02 0.02 0.02"></a-entity>
-            <a-entity gltf-model="#bottle-model" scale="0.02 0.02 0.02"></a-entity>
-            <a-entity gltf-model="#bottle-model" scale="0.02 0.02 0.02"></a-entity>
-            <a-entity gltf-model="#bottle-model" scale="0.02 0.02 0.02"></a-entity>
-            <a-entity gltf-model="#bottle-model" scale="0.02 0.02 0.02"></a-entity>
-            <a-entity gltf-model="#bottle-model" scale="0.02 0.02 0.02"></a-entity>
-            <a-entity gltf-model="#bottle-model" scale="0.02 0.02 0.02"></a-entity>
-            <a-entity gltf-model="#bottle-model" scale="0.02 0.02 0.02"></a-entity>
-            <a-entity gltf-model="#bottle-model" scale="0.02 0.02 0.02"></a-entity>
-            <a-entity gltf-model="#bottle-model" scale="0.02 0.02 0.02"></a-entity>
-            <a-entity gltf-model="#bottle-model" scale="0.02 0.02 0.02"></a-entity>
-            <a-entity gltf-model="#bottle-model" scale="0.02 0.02 0.02"></a-entity>
-            <a-entity gltf-model="#bottle-model" scale="0.02 0.02 0.02"></a-entity>
-            <a-entity gltf-model="#bottle-model" scale="0.02 0.02 0.02"></a-entity>
-            <a-entity gltf-model="#bottle-model" scale="0.02 0.02 0.02"></a-entity>
-            <a-entity gltf-model="#bottle-model" scale="0.02 0.02 0.02"></a-entity>
-            <a-entity gltf-model="#bottle-model" scale="0.02 0.02 0.02"></a-entity>
-            <a-entity gltf-model="#bottle-model" scale="0.02 0.02 0.02"></a-entity>
-            <a-entity gltf-model="#bottle-model" scale="0.02 0.02 0.02"></a-entity>
-            <a-entity gltf-model="#bottle-model" scale="0.02 0.02 0.02"></a-entity>
-            <a-entity gltf-model="#bottle-model" scale="0.02 0.02 0.02"></a-entity>
-            <a-entity gltf-model="#bottle-model" scale="0.02 0.02 0.02"></a-entity>
-            <a-entity gltf-model="#bottle-model" scale="0.02 0.02 0.02"></a-entity>
-            
-            <a-entity gltf-model="#garbage-bags" scale="0.5 0.5 0.5"></a-entity>
-            <a-entity gltf-model="#garbage-bags" scale="0.5 0.5 0.5"></a-entity>
-            <a-entity gltf-model="#garbage-bags" scale="0.5 0.5 0.5"></a-entity>
-            <a-entity gltf-model="#garbage-bags" scale="0.5 0.5 0.5"></a-entity>
-            <a-entity gltf-model="#garbage-bags" scale="0.5 0.5 0.5"></a-entity>
-            <a-entity gltf-model="#garbage-bags" scale="0.5 0.5 0.5"></a-entity>
-            <a-entity gltf-model="#garbage-bags" scale="0.5 0.5 0.5"></a-entity>
-            <a-entity gltf-model="#garbage-bags" scale="0.5 0.5 0.5"></a-entity>
-            <a-entity gltf-model="#garbage-bags" scale="0.5 0.5 0.5"></a-entity>
-            <a-entity gltf-model="#garbage-bags" scale="0.5 0.5 0.5"></a-entity>
-            <a-entity gltf-model="#garbage-bags" scale="0.5 0.5 0.5"></a-entity>
+            <a-entity gltf-model="#urban-garbage" scale="1 1 1" position="4 0 10" rotation="0 -90 0"></a-entity>
         </a-entity>
 
         <!-- <a-entity gltf-model="#garbage-quenn" scale="0.5 0.5 0.5" position="2 0 -3"></a-entity> -->
-
-        <!-- <a-entity gltf-model="#urban-garbage" scale="1 1 1" position="4 0 1"></a-entity> -->
-        <a-entity gltf-model="#urban-garbage" scale="1 1 1" position="4 0 10" rotation="0 -90 0"></a-entity>
     </a-scene>
   </body>
 
     <script>
-    // Select all <a-entity> elements within the container
-    const entities = document.querySelectorAll('#entities-container a-entity');
+    const entities = document.querySelector('#entities-container');
 
-    // Loop through each entity and set its rotation to a random value
-    entities.forEach(entity => {
+    // Generate garbage bags
+    for (let i = 0; i < 5; i++) {
+        const entity = document.createElement('a-entity');
         const randomRotation = `0 ${Math.floor(Math.random() * 360)} 0`;
-
         const randomPositionX = Math.random() * 10 - 5;
         const randomPositionZ = Math.random() * 10 - 5;
         const randomPosition = `${randomPositionX} 0 ${randomPositionZ}`;
         
+        entity.setAttribute('gltf-model', '#garbage-bags');
+        entity.setAttribute('scale', '0.5 0.5 0.5');
+        entity.setAttribute('lod', 'distance: 5');
+        entity.setAttribute('occlusion', 'objects: .ground');
         entity.setAttribute('rotation', randomRotation);
         entity.setAttribute('position', randomPosition);
-    });
+
+        // append the entity to the scene
+        entities.appendChild(entity);
+    }
+
+    // Generate bottles
+    for (let i = 0; i < 20; i++) {
+        const entity = document.createElement('a-entity');
+        const randomRotation = `0 ${Math.floor(Math.random() * 360)} 0`;
+        const randomPositionX = Math.random() * 10 - 5;
+        const randomPositionZ = Math.random() * 10 - 5;
+        const randomPosition = `${randomPositionX} 0 ${randomPositionZ}`;
+        
+        entity.setAttribute('gltf-model', '#bottle');
+        entity.setAttribute('scale', '0.02 0.02 0.02');
+        entity.setAttribute('lod', 'distance: 5');
+        entity.setAttribute('occlusion', 'objects: .ground');
+        entity.setAttribute('rotation', randomRotation);
+        entity.setAttribute('position', randomPosition);
+
+        // append the entity to the scene
+        entities.appendChild(entity);
+    }
     </script>
 </html>
