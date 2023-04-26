@@ -1,0 +1,440 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 280,
+      "max": [
+        44.274837493896484,
+        108.7982177734375,
+        48.070655822753906
+      ],
+      "min": [
+        -48.351470947265625,
+        -7.742884635925293,
+        -43.68373107910156
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 3360,
+      "componentType": 5126,
+      "count": 280,
+      "max": [
+        0.9989106059074402,
+        0.9955496788024902,
+        0.9873661994934082
+      ],
+      "min": [
+        -0.9968345165252686,
+        -0.9994043707847595,
+        -0.9958545565605164
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 280,
+      "max": [
+        0.9868956804275513,
+        0.9933657646179199,
+        0.9957692623138428,
+        1.0
+      ],
+      "min": [
+        -0.9981071949005127,
+        -0.8523788452148438,
+        -0.960237443447113,
+        -1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 280,
+      "max": [
+        0.9753250479698181,
+        0.9707135558128357
+      ],
+      "min": [
+        0.06890431046485901,
+        0.0314861536026001
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 2240,
+      "componentType": 5126,
+      "count": 280,
+      "max": [
+        0.9753250479698181,
+        0.9707135558128357
+      ],
+      "min": [
+        0.06890431046485901,
+        0.0314861536026001
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 1014,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 6720,
+      "componentType": 5126,
+      "count": 193,
+      "max": [
+        41.4213981628418,
+        94.82123565673828,
+        39.9361457824707
+      ],
+      "min": [
+        -44.98533248901367,
+        -15.069501876831055,
+        -44.1669807434082
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 9036,
+      "componentType": 5126,
+      "count": 193,
+      "max": [
+        0.9941511750221252,
+        0.9867849946022034,
+        0.9980118274688721
+      ],
+      "min": [
+        -0.9926830530166626,
+        -0.992376446723938,
+        -0.992111325263977
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 4480,
+      "componentType": 5126,
+      "count": 193,
+      "max": [
+        0.9327350854873657,
+        0.9991887807846069,
+        0.9954851269721985,
+        1.0
+      ],
+      "min": [
+        -0.9995669722557068,
+        -0.9921630024909973,
+        -0.9941024780273438,
+        1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 4480,
+      "componentType": 5126,
+      "count": 193,
+      "max": [
+        0.5863348245620728,
+        0.9970681071281433
+      ],
+      "min": [
+        0.0029318961314857006,
+        0.002931952476501465
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 6024,
+      "componentType": 5126,
+      "count": 193,
+      "max": [
+        0.5863348245620728,
+        0.9970681071281433
+      ],
+      "min": [
+        0.0029318961314857006,
+        0.002931952476501465
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 4056,
+      "componentType": 5125,
+      "count": 804,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "DJMaesen (https://sketchfab.com/bumstrum)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/garbage-bags-9e769751ac3a4b6a893a5719349b78ca",
+      "title": "Garbage bags"
+    },
+    "generator": "Sketchfab-12.66.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 7272,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 7568,
+      "byteOffset": 7272,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 11352,
+      "byteOffset": 14840,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 7568,
+      "byteOffset": 26192,
+      "byteStride": 16,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 33760,
+      "uri": "scene.bin"
+    }
+  ],
+  "images": [
+    {
+      "uri": "textures/garbagebags_baseColor.png"
+    },
+    {
+      "uri": "textures/garbagebags_metallicRoughness.png"
+    },
+    {
+      "uri": "textures/garbagebags_normal.png"
+    }
+  ],
+  "materials": [
+    {
+      "name": "garbagebags",
+      "normalTexture": {
+        "index": 2
+      },
+      "occlusionTexture": {
+        "index": 1,
+        "strength": 0.5357728209531257
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicFactor": 0.0,
+        "metallicRoughnessTexture": {
+          "index": 1
+        }
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "bag1_garbagebags_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3,
+            "TEXCOORD_1": 4
+          },
+          "indices": 5,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "bag2_garbagebags_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 7,
+            "POSITION": 6,
+            "TANGENT": 8,
+            "TEXCOORD_0": 9,
+            "TEXCOORD_1": 10
+          },
+          "indices": 11,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        2.220446049250313e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2
+      ],
+      "matrix": [
+        0.009999999776482582,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.009999999776482582,
+        0.0,
+        0.0,
+        -0.009999999776482582,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "b2778c990f0d4859ae805b1178c14d2d.fbx"
+    },
+    {
+      "children": [
+        3,
+        5
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        4
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        4.554272651672363,
+        8.921845436096191,
+        42.48200988769531,
+        1.0
+      ],
+      "name": "bag1"
+    },
+    {
+      "mesh": 0,
+      "name": "bag1_garbagebags_0"
+    },
+    {
+      "children": [
+        6
+      ],
+      "matrix": [
+        -0.42830647151627255,
+        -2.9802322305701316e-08,
+        0.9036335354873011,
+        0.0,
+        -1.2764527522812336e-08,
+        0.9999999999999996,
+        2.693037786463956e-08,
+        0.0,
+        -0.9036335354873015,
+        -1.4460170935527316e-17,
+        -0.42830647151627255,
+        0.0,
+        -12.994047164916992,
+        13.762239456176758,
+        -44.728363037109375,
+        1.0
+      ],
+      "name": "bag2"
+    },
+    {
+      "mesh": 1,
+      "name": "bag2_garbagebags_0"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "sampler": 0,
+      "source": 2
+    }
+  ]
+}

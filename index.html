@@ -4,91 +4,27 @@
     <meta charset="utf-8">
     <title>A-Frame Environment Component</title>
     <meta name="description" content="A-Frame Environment Component">
-    <meta name="author" content="Diego F. Goberna">
+    <meta name="author" content="Abdul Muktadir Miah">
     <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@090b5f8f0abe949ddcfdbbc14c75822322a2dd53/dist/aframe-master.min.js"></script>
     <script src="dist/aframe-environment-component.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Voces" rel="stylesheet">
-
-    <style>
-      h1 {
-        position: absolute;
-        z-index: 7000;
-        bottom: 30px;
-        left: 40%;
-        left: calc( 50% - 160px );
-        margin: 0;
-        font: 28px 'Voces', sans-serif;
-        color: #000;
-      }
-      h1 b{
-        color: white;
-        text-shadow: 1px 2px 0px black;
-        width: 300px;
-        display: inline-block;
-        text-align: center;
-      }
-      #about {
-        display: none;
-        position: absolute;
-        z-index: 7001;
-        width: 300px;
-        top: 40px;
-        left: 40px;
-        font: 14px 'Voces', Arial, sans-serif;
-        color: white;
-        line-height: 1.3rem;
-        background: rgba(0,0,0,0.2);
-        padding: 1rem;
-        box-sizing: border-box;
-      }
-      #about b{
-          font-weight: bold;
-          font-family: monospace;
-      }
-      #about p:last-child{
-        margin: 0;
-      }
-      #about a{
-        font-size: 14px;
-        color: #000;
-        font-weight: bold;
-        text-decoration: none;
-        transition: border-bottom-width 0.1s;
-        display: inline-block;
-        background: rgba(255,255,255,0.4);
-        padding: 0 3px;
-      }
-      #about a:hover{
-        background: rgba(255,255,255,1);
-      }
-      h1 a{
-        color: white;
-        text-decoration: none;
-        text-shadow: 1px 2px 0px black;
-        font-size: 20px;
-      }
-
-    @media (max-width: 400px), (max-height: 300px) {
-      #about {
-        left: 5%;
-        top: 5%;
-        width: 90%;
-      }
-      h1 {
-        left: 5%;
-      }
-      h1 b {
-        width: auto;
-      }
-    }
-    </style>
   </head>
   <body>
 
     <a-scene overlay-visibility>
+        <!-- Asset Management -->
+        <a-assets>
+            <a-asset-item id="bottle-model" src="assets/plastic_water_bottle/scene.gltf"></a-asset-item>
+            <a-asset-item id="garbage-bags" src="assets/garbage_bags/scene.gltf"></a-asset-item>
+            <a-asset-item id="garbage-quenn" src="assets/garbage_quenn/scene.gltf"></a-asset-item>
+            <a-asset-item id="urban-garbage" src="assets/urban_garbage_-_low_poly_prop_set/scene.gltf"></a-asset-item>
+        </a-assets>
 
-      <a-entity environment="preset: yavapai" preset-switcher id="environment"></a-entity>
-
+        <!-- Models -->
+        <a-entity environment="preset: yavapai" preset-switcher id="environment"></a-entity>
+        <a-entity gltf-model="#bottle-model" scale="0.02 0.02 0.02" position="0 0.75 -3" rotation="-90 90 0"></a-entity>
+        <a-entity gltf-model="#garbage-bags" scale="0.5 0.5 0.5" position="1 0.75 -3"></a-entity>
+        <a-entity gltf-model="#garbage-quenn" scale="0.5 0.5 0.5" position="2 0.75 -3"></a-entity>
+        <a-entity gltf-model="#urban-garbage" scale="0.5 0.5 0.5" position="-3 0.75 -3"></a-entity>
     </a-scene>
   </body>
 </html>
