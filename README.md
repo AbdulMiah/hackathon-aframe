@@ -1,91 +1,92 @@
-# aframe-environment-component
+# hackathon-aframe
 
-A simple way of setting up a whole basic environment for your
-[A-Frame](http://aframe.io) VR scene.
 
-![gif](https://github.com/feiss/aframe-environment-component/blob/master/assets/aframeenvironment.gif?raw=true)
 
-Make sure you are using __A-Frame 1.3.0__ or later. Then just include `aframe-environment-component.js` in your HTML:
+## Getting started
 
-```html
-  <script src="https://unpkg.com/aframe-environment-component@1.3.2/dist/aframe-environment-component.min.js"></script>
+To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+
+Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+
+## Add your files
+
+- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
+- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+
+```
+cd existing_repo
+git remote add origin https://git.cardiff.ac.uk/c2035950/hackathon-aframe.git
+git branch -M main
+git push -uf origin main
 ```
 
-and add the `environment` component to an entity:
+## Integrate with your tools
 
-```html
-  <a-entity environment></a-entity>
-```
+- [ ] [Set up project integrations](https://git.cardiff.ac.uk/c2035950/hackathon-aframe/-/settings/integrations)
 
-That's it! :)
+## Collaborate with your team
 
+- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
+- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
+- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
+- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
+- [ ] [Automatically merge when pipeline succeeds](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
 
-## Presets
+## Test and Deploy
 
-The previous code will setup a default scene, but you have a bunch of already predefined presets to choose from, using the `preset` parameter, like this:
+Use the built-in continuous integration in GitLab.
 
+- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
+- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
+- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
+- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
+- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
 
-```html
-  <a-entity environment="preset: <name of the preset>"></a-entity>
-```
+***
 
-You can view and try all the presets in the **[aframe-environment-component Test Page](http://supermedium.github.io/aframe-environment-component/)**. The current list of presets are listed in the next section.
+# Editing this README
 
+When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thank you to [makeareadme.com](https://www.makeareadme.com/) for this template.
 
-## Parameters
+## Suggestions for a good README
+Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
 
-Apart from using a preset, you can tweak the environment with many parameters, like this:
+## Name
+Choose a self-explaining name for your project.
 
-```html
-  <a-entity environment="lightPosition: 1 5 -2; groundColor: #445"></a-entity>
-```
+## Description
+Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
 
-You can also select a preset but change some of its parameters:
-```html
-  <a-entity environment="preset: forest; groundColor: #445; grid: cross"></a-entity>
-```
+## Badges
+On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
 
-This is the list of the available parameters.
+## Visuals
+Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
 
+## Installation
+Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
 
-| Parameter   | Default | Description |
-|-------------|---------|-------------|
-| **active**  | true    | Show/hides the component. Use this instead of using the `visible` attribute |
-| **preset**      | 'default'  | Valid values: `none`, `default`, `contact`, `egypt`, `checkerboard`, `forest`, `goaland`, `yavapai`, `goldmine`, `threetowers`, `poison`, `arches`, `tron`, `japan`, `dream`, `volcano`, `starry`, `osiris`, `moon` |
-| **seed**        | 1       | Seed for randomization. If you don't like the layout of the elements, try another value for the seed.  |
-| **skyType**     | 'atmosphere' | Valid values: `color`, `gradient`, `atmosphere` |
-| **skyColor**    |         | When `skyType` is `color` or  `gradient`, it sets the main sky color |
-| **horizonColor**|         | When `skyType` is `gradient`, it sets the color of the sky near the horizon |
-| **lighting**      | 'distant'   | Valid values: `none`, `distant`, `point`. A hemisphere light and a key light (directional or point) are added to the scene automatically when using the component. Use `none` if you don't want this automatic lighting set being added. The color and intensity are estimated automatically. |
-| **shadow**  | false | Shadows on/off. Sky light casts shadows on the ground of all those objects with `shadow` component applied |
-| **shadowSize** | 10 | Shadows size |
-| **lightPosition** | 0 1 -0.2 | Position of the main light. If `skyType` is `atmospheric`, only the orientation matters (is a directional light) and it can turn the scene into night when lowered towards the horizon. |
-| **fog**      |  0    | Amount of fog (0 = none, 1 = full fog). The color is estimated automatically. |
-| **flatShading** | false | Whether to show everything smoothed (false) or polygonal (true). |
-| **playArea** |  1    | Radius of the area in the center reserved for the player and the gameplay. The ground is flat in there and no objects are placed inside.|
-| **ground**  | 'hills' | Valid values: `none`, `flat`, `hills`, `canyon`, `spikes`, `noise`. Orography style. |
-| **groundYScale** | 3  | Maximum height (in meters) of ground's features (hills, mountains, peaks..) |
-| **groundTexture**| 'none' | Valid values: `none`, `checkerboard`, `squares`, `walkernoise`|
-| **groundColor** | '#553e35'  | Main color of the ground |
-| **groundColor2**| '#694439'  | Secondary color of the ground. Used for textures, ignored if `groundTexture` is `none` |
-| **dressing** | 'none' | Valid values: `none`, `cubes`, `pyramids`, `cylinders`, `towers`, `mushrooms`, `trees`, `apparatus`, `torii`. Dressing is the term we use here for the set of additional objects that are put on the ground for decoration. |
-| **dressingAmount** | 10  | Number of objects used for dressing |
-| **dressingColor** | '#795449' | Base color of dressing objects |
-| **dressingScale** | 5   | Height (in meters) of dressing objects |
-| **dressingVariance** | '1 1 1' | Maximum x,y,z meters to randomize the size and rotation of each dressing object. Use `0 0 0` for no variation in size nor rotation |
-| **dressingUniformScale** | true | If `false`, a different value is used for each coordinate x, y, z in the random variance of size.|
-| **grid**    | 'none'  | Valid values: `none`, `1x1`, `2x2`, `crosses`, `dots`, `xlines`, `ylines`. 1x1 and 2x2 are rectangular grids of 1 and 2 meters side, respectively.  |
-| **gridColor** | '#ccc' | Color of the grid. |
+## Usage
+Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
 
+## Support
+Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
 
-The best way to work with them is to press `ctrl-alt-i` to open the [inspector](https://aframe.io/docs/master/introduction/visual-inspector-and-dev-tools.html#a-frame-inspector), search for 'environment' in the filter box and select it, and tweak the parameters while checking the changes in realtime. When you are happy, you can use the `Copy attributes` button or even better, copy the attributes logged in the browser's dev tools console.
+## Roadmap
+If you have ideas for releases in the future, it is a good idea to list them in the README.
 
-## Performance
+## Contributing
+State if you are open to contributions and what your requirements are for accepting them.
 
-The main idea of this component is to have a complete and visually interesting environment by just including one .js file, with no extra includes or requests. This requires to store all the assets inside the js or (in most of cases) to procedurally generate them. Despite of the computing time and increased file size, both options are normally faster than requesting and waiting for additional textures or model files.
+For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
 
-Apart from the parameter `dressingAmount`, there is not much difference among different values in parameters in terms of performance. Just keep `dressingAmount` value under watch and lower it if the performance is not optimal.
+You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
 
-## Help and contact
+## Authors and acknowledgment
+Show your appreciation to those who have contributed to the project.
 
-PRs are appreciated, issues are welcomed. For any question, ping @feiss at [aframevr in Slack](https://aframevr.slack.com/join/shared_invite/zt-f6rne3ly-ekVaBU~Xu~fsZHXr56jacQ) or [Discord](https://supermedium.com/discord).
+## License
+For open source projects, say how it is licensed.
+
+## Project status
+If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
