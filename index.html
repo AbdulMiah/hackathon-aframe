@@ -47,6 +47,8 @@
             <a-asset-item id="bottle" src="assets/plastic_water_bottle/scene.gltf"></a-asset-item>
             <a-asset-item id="garbage-bags" src="assets/garbage_bags/scene.gltf"></a-asset-item>
             <a-asset-item id="skip" src="assets/rusty_skip/scene.gltf"></a-asset-item>
+            <a-asset-item id="trash-pile" src="assets/trash_pile/scene.gltf"></a-asset-item>
+            <a-asset-item id="bottle-pile" src="assets/Bottles/Bottles/3D Model/Bottles.obj" ></a-asset-item>
         </a-assets>
         <a-entity environment="preset: yavapai" preset-switcher id="environment"></a-entity>
         <a-entity id="entities-container"></a-entity>
@@ -54,7 +56,7 @@
     <script>
       const entities = document.querySelector('#entities-container');
       
-      const generateEntities = (model, scale, positionRange, lod, quantity, positionY) => {
+      const generateEntities = (model, modelType, scale, positionRange, lod, quantity, positionY) => {
         for (let i = 0; i < quantity; i++) {
           const entity = document.createElement('a-entity');
           const randomRotation = `0 ${Math.floor(Math.random() * 360)} 0`;
@@ -62,7 +64,12 @@
           const randomPositionZ = Math.random() * positionRange - positionRange / 2;
           const randomPosition = `${randomPositionX} ${positionY} ${randomPositionZ}`;
           
-          entity.setAttribute('gltf-model', model);
+          if (modelType === 'gltf') {
+            entity.setAttribute('gltf-model', model);
+          } else if (modelType === 'obj') {
+            entity.setAttribute('obj-model', `obj: ${model}`);
+          }
+
           entity.setAttribute('scale', scale);
           entity.setAttribute('lod', lod);
           entity.setAttribute('occlusion', 'objects: .ground');
@@ -84,9 +91,10 @@
         scene.style.display = 'initial';
       }, 10000);
 
-      generateEntities('#garbage-bags', '0.5 0.5 0.5', 10, 'distance: 10000 ; factor: 500', 5, 0);
-      generateEntities('#bottle', '0.02 0.02 0.02', 10, 'distance: 10000; factor: 500', 20, 0);
-      generateEntities('#skip', '1 1 1', 20, 'distance: 10000; factor: 500', 3, 0.5);
+      generateEntities('#garbage-bags', 'gltf', '0.5 0.5 0.5', 10, 'distance: 10000 ; factor: 500', 3, 0);
+      generateEntities('#bottle-pile', 'obj', '0.02 0.02 0.02', 20, 'distance: 10000; factor: 500', 80, 0);
+      generateEntities('#skip', 'gltf', '1 1 1', 20, 'distance: 10000; factor: 500', 2, 0.5);
+      generateEntities('#trash-pile', 'gltf', '1 1 1', 20, 'distance: 10000; factor: 500', 5, 0);
     </script>
   </body>
 </html>

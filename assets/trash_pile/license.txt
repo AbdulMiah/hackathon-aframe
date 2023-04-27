@@ -1,0 +1,11 @@
+Model Information:
+* title:	Trash Pile
+* source:	https://sketchfab.com/3d-models/trash-pile-16a675e4dda24560b4006d9439d1c2da
+* author:	IntARMedia (https://sketchfab.com/IntARMedia)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Trash Pile" (https://sketchfab.com/3d-models/trash-pile-16a675e4dda24560b4006d9439d1c2da) by IntARMedia (https://sketchfab.com/IntARMedia) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
